@@ -1,0 +1,52 @@
+﻿<Page x:Class="Senior_Project_WPF.RegistrationWindow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:local="clr-namespace:Senior_Project_WPF"
+      mc:Ignorable="d"
+      Title="Intelligent Inventory Management and Sales Analytics System"
+      Height="450" Width="950">
+
+    <Grid Background="White" Margin="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Title -->
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+                   Text="Register Account"
+                   FontSize="24"
+                   FontWeight="Bold"
+                   Foreground="DarkBlue"
+                   HorizontalAlignment="Center"
+                   Margin="0,10"/>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Username:" FontSize="16" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,60,164,0" Height="24" Width="91"/>
+        <TextBox Grid.Row="1" x:Name="regUsernameTextBox" Height="28" Margin="244,54,122,236" Grid.ColumnSpan="2"/>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Password:" FontSize="16" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,99,185,0"/>
+        <PasswordBox Grid.Row="1" x:Name="regPasswordBox" Height="28" Margin="244,134,122,156" Grid.ColumnSpan="2"/>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Confirm Password:" FontSize="16" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,138,124,0"/>
+        <PasswordBox Grid.Row="1" x:Name="confirmPasswordBox" Height="28" Margin="244,94,122,196" Grid.ColumnSpan="2"/>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Role:" FontSize="16" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,179,220,0" RenderTransformOrigin="-1.428,1.966"/>
+        <ComboBox Grid.Row="1" x:Name="roleComboBox" Height="28" Margin="244,174,122,116" FontSize="14" Grid.ColumnSpan="2">
+            <ComboBoxItem Content="Employee" IsSelected="True"/>
+            <ComboBoxItem Content="Admin"/>
+        </ComboBox>
+
+        <!-- Buttons -->
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0"/>
+        <Button Content="Register" Click="RegisterButon_Click" Margin="219,266,163,22" Grid.Column="1" Grid.Row="1"/>
+        <Button Content="Back" Click="BackButon_Click" Margin="199,266,57,22" Grid.Row="1"/>
+    </Grid>
+</Page>
